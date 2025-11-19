@@ -4,6 +4,7 @@ fn main() {
     App::new()
         .add_plugins(DefaultPlugins
             .set(ImagePlugin::default_nearest()))
+        .insert_resource(ClearColor(Color::Srgba(Srgba::rgb_u8(197, 204, 184))))
         .add_systems(Startup, create_map)
         .run();
 }
